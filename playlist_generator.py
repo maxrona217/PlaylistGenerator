@@ -19,17 +19,18 @@ except:
 	os.remove(f".cache-{username}")
 	token = util.prompt_for_user_token(username)
 
-# Create spotify object
-spotifyObject = spotipy.Spotify(auth=token)
+print(token)
 
-user = spotifyObject.current_user()
+# # Create spotify object
+# spotifyObject = spotipy.Spotify(auth=token)
 
-results = spotifyObject.search(q='artist:arctic', type='artist', limit=1)
+# user = spotifyObject.current_user()
 
-print(json.dumps(results['artists'], sort_keys=True, indent=4))
+# results = spotifyObject.search(q='artist:arctic', type='artist', limit=4)
 
-displayName = user['display_name']
-followers = user['followers']['total']
+# print(json.dumps(len(results['artists']), sort_keys=True, indent=4))
 
-# print(json.dumps(VARIABLE, sort_keys=True, indent=4))
+# displayName = user['display_name']
+# followers = user['followers']['total']
 
+# # print(json.dumps(VARIABLE, sort_keys=True, indent=4))
